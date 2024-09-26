@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derm Aid</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <div class="App">
+    <h1>Derm Aid</h1>
+    <form id="dermAidForm">
+      <div>
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" accept="image/*" capture="environment" required />
+        <input type="file" id="gallery" accept="image/*" required />
+      </div>
+      <img id="uploadedImage" alt="Uploaded" width="200" style="display:none;" />
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z\s]{1,50}" required />
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" max="110" required />
+      </div>
+      <div>
+        <label for="duration">How long has this been?</label>
+        <select id="duration" name="duration" required>
+          <option value="">Select</option>
+          <option value="1-3 days">1-3 days</option>
+          <option value="1-2 weeks">1-2 weeks</option>
+          <option value="1 month">1 month</option>
+          <option value="More than 1 month">More than 1 month</option>
+        </select>
+      </div>
+      <div>
+        <label for="itching">Is there itching?</label>
+        <select id="itching" name="itching" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div>
+        <label for="bodyPart">On which parts of the body?</label>
+        <select id="bodyPart" name="bodyPart" required>
+          <option value="">Select</option>
+          <option value="Face">Face</option>
+          <option value="Arms">Arms</option>
+          <option value="Legs">Legs</option>
+          <option value="Torso">Torso</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="familyHistory">Does anyone in your family have the same symptoms?</label>
+        <select id="familyHistory" name="familyHistory" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="script2.js"></script>
+</body>
+</html>
